@@ -1,3 +1,4 @@
+import { type } from "express/lib/response";
 import mongoose from "mongoose";
 
 const ProductsSchema = new mongoose.Schema(
@@ -18,6 +19,10 @@ const ProductsSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    status:{
+      type:String,
+      required: true
+    }
   },
   { timestamps: true }
 );

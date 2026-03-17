@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
       // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-      user: "mola2022estateagency@gmail.com",
+      user: "fortunesales111@gmail.com",
       pass: "jjis mulj fypt goyq",
     },
   });
@@ -25,11 +25,11 @@ export const sendEmailToken = async (req, res, next) => {
 
                 // send mail with defined transport object
                 await transporter.sendMail({
-                  from: '"Mola App" <mola2022estateagency@gmail.com>', // sender address
+                  from: '"Fortune Sales" <fortunesales111@gmail.com>', // sender address
                   to: req.body.email, // list of receivers
                   subject: "Verification", // Subject line
-                  text:"Hi, Mola App User!",
-                  html: `Hi, Mola App User!. Here is your otp. <b><em> ${token['token']} </em></b>`// plain text body
+                  text:"Hi, Fortune Sales User!",
+                  html: `Hi, Fortune Sales User!. Here is your otp. <b><em> ${token['token']} </em></b>`// plain text body
                 }, (error, info) => {
                   if (error) {
                     return res.status(402).json({status:"error", msg:'There was an error otp has not been sent!!'});
