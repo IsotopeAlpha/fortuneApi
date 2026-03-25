@@ -17,7 +17,7 @@ export const createCategory = async (req, res, next) => {
 
 
 export const deleteCategory = async (req, res, next) => {
-  const CategoryId = req.params.CategoryId;
+  const CategoryId = req.params.categoryId;
   try {
     try {
       await Categories.findByIdAndDelete(CategoryId);
@@ -49,11 +49,11 @@ export const getCategory = async (req, res, next) => {
 
 export const getAllCategories = async (req, res, next) => {
   try {
-    const Categories = await (await Categories.find()).reverse();
+    const categories = await Categories.find().reverse();
     res.status(200).json({
       status: "success",
       message: "Categories retrieved successfully",
-      data: Categories,
+      data: categories,
     });
   } catch (err) {
     next(err);
