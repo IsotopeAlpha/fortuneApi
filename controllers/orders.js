@@ -44,7 +44,7 @@ export const createOrder = async (req, res, next) => {
 };
 
 export const deleteOrder = async (req, res, next) => {
-  const orderId = req.params.orderId;
+  const orderId = req.params.id;
   try {
     await Orders.findByIdAndUpdate(orderId);
     res.status(200).json({

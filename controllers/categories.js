@@ -17,7 +17,7 @@ export const createCategory = async (req, res, next) => {
 
 
 export const deleteCategory = async (req, res, next) => {
-  const CategoryId = req.params.categoryId;
+  const CategoryId = req.params.id;
     try {
       await Categories.findByIdAndDelete(CategoryId);
       res.status(200).json({
