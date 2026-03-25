@@ -15,7 +15,7 @@ export const createProduct = async (req, res, next) => {
     const savedProduct = await newProduct.save();
     res.status(200).json({
       status: "success",
-      message: `Congratulations ${req.body.name}, you have sucessfully booked a room with Mola.`,
+      message: `New Product Added Successfully.`,
       data: savedProduct,
     });
   } catch (err) {

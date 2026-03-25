@@ -8,6 +8,8 @@ import bodyParser from "body-parser";
 import usersRoute from "./routes/users.js";
 import productsRoute from "./routes/products.js";
 import ordersRoute from "./routes/orders.js";
+import categoryRoute from "./routes/category.js";
+
 import mongoose from "mongoose";
 
 const port = process.env.PORT || 8000;
@@ -45,6 +47,7 @@ app.use("/auth", authRoute);
 app.use("/users", usersRoute);
 app.use("/products", productsRoute);
 app.use("/orders", ordersRoute);
+app.use("/categories", categoryRoute);
 
 app.get("/", (req, res) => {
   res.send("Fortune Sales Api");
