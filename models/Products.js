@@ -18,12 +18,20 @@ const ProductsSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    status:{
-      type:String,
-      required: true
-    }
+    category: {
+      type: String,
+      required: true,
+    },
+    categoryId: {
+      type: String,
+      required: true,
+    },
+    status: {
+      type: String,
+      required: true,
+    },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 export default mongoose.model("Products", ProductsSchema);
