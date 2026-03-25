@@ -56,7 +56,7 @@ export const getProduct = async (req, res, next) => {
 
 export const getAllProducts = async (req, res, next) => {
   try {
-    const products = await Products.find().reverse();
+    const products = await (await Products.find()).reverse();
     res.status(200).json({
       status: "success",
       message: "Products retrieved successfully",

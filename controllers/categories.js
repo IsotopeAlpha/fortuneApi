@@ -49,7 +49,7 @@ export const getCategory = async (req, res, next) => {
 
 export const getAllCategories = async (req, res, next) => {
   try {
-    const categories = await Categories.find().reverse();
+    const categories = await (await Categories.find()).reverse();
     res.status(200).json({
       status: "success",
       message: "Categories retrieved successfully",
