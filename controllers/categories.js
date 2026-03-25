@@ -18,7 +18,6 @@ export const createCategory = async (req, res, next) => {
 
 export const deleteCategory = async (req, res, next) => {
   const CategoryId = req.params.categoryId;
-  try {
     try {
       await Categories.findByIdAndDelete(CategoryId);
       res.status(200).json({
@@ -29,9 +28,6 @@ export const deleteCategory = async (req, res, next) => {
     } catch (err) {
       next(err);
     }
-  } catch (err) {
-    next(err);
-  }
 };
 
 export const getCategory = async (req, res, next) => {
