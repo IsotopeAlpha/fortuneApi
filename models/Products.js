@@ -2,11 +2,15 @@ import mongoose from "mongoose";
 
 const ProductsSchema = new mongoose.Schema(
   {
-    label: {
+    name: {
       type: String,
       required: true,
     },
-    image: {
+    imageUrl: {
+      type: String,
+      required: true,
+    },
+    imageId: {
       type: String,
       required: true,
     },
