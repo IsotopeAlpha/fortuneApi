@@ -17,7 +17,7 @@ export const createOrder = async (req, res, next) => {
   const newOrder = new Orders(req.body);
 
   try {
-    const savedOrder = await Orders.save();
+    const savedOrder = await newOrder.save();
 
     res.status(200).json({
       status: "success",
