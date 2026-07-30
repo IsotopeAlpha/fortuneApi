@@ -21,16 +21,16 @@ export const createOrder = async (req, res, next) => {
 
     res.status(200).json({
       status: "success",
-      message: `Congratulations ${req.body.name}, you have sucessfully ordered from Fortune Sales. Be rest assured, your order will be delivered soon. Please be with your phone.`,
+      message: `Congratulations ${req.body.name}, you have sucessfully ordered from Gem Basics. Be rest assured, your order will be delivered soon. Please be with your phone.`,
       data: savedOrder,
     });
     await transporter.sendMail(
       {
-        from: '"Fortune Sales" <fortunesales111@gmail.com>', // sender address
+        from: '"Gem Basics" <fortunesales111@gmail.com>', // sender address
         to: req.body.email, // list of receivers
         subject: "Congratulations", // Subject line
-        text: "Hi, Fortune Sales User!",
-        html: `Congratulations ${req.body.name}. You have sucessfully ordered from Fortune Sales. Be rest assured, your order will be delivered soon. Please be with your phone. \n Your order is ${savedOrder}`, // plain text body
+        text: "Hi, Gem Basics User!",
+        html: `Congratulations ${req.body.name}. You have sucessfully ordered from Gem Basics. Be rest assured, your order will be delivered soon. Please be with your phone. \n Your order is ${savedOrder}`, // plain text body
       },
       (error, info) => {
         if (error) {

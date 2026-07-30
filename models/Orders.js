@@ -5,6 +5,7 @@ const OrdersSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
+      unique: false,
     },
     name: {
       type: String,
